@@ -30,7 +30,11 @@ export default function Signup() {
     }
 
     return (
-        <div className="centered">
+        <div className="">
+            <div className="flex justify-between poppins bg-blue-500 py-3 px-3 text-white">
+                <div className="text-xl font-bold">Recommovie</div>
+            </div>
+            <div  className="flex items-center justify-center"  style={{height: '90vh'}}>
             <div className="shadow-xl p-8" style={{ width: "300px" }}>
                 {error && (
                     <div
@@ -106,6 +110,10 @@ export default function Signup() {
                         &nbsp;Log In
                     </Link>
                 </div>
+            </div>
+            </div>
+            <div className="flex justify-center poppins bg-blue-500 py-4 px-3 text-white">
+                <div className="text-sm font-bold">By Prerna Choudhary</div>
             </div>
         </div>
     );

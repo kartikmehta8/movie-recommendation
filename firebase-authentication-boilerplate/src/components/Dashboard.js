@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import NoMovie from './NoMovie.js';
-import Youtube from './Youtube.js';
 
 export default function Dashboard() {
     const [error, setError] = useState("");
@@ -13,22 +12,21 @@ export default function Dashboard() {
     const [movieName, setMovieName] = useState("");
     const [recMovie, setRecMovie] = useState("");
     const [isMovie, setIsMovie] = useState(0);
+    const [history, setHistory] = useState(0);
     const navigate = useNavigate();
 
-    // useEffect(() => {
-    //     axios.get('http://127.0.0.1:8000/movie/X-Men').then(response => {
-    //     setNames(response.data[0]);
-    //     setPosters(response.data[1]);
-    // }).then(
-    //     console.log(names)
-    // ).catch(err => console.log(err));
-    // }, [])
+    let l = localStorage.getItem("movie");
+    let list = JSON.parse(l);
 
     function handleChange() {
         setIsMovie(0);
         axios.get(`http://127.0.0.1:8000/movie/${movieName}`).then(response => {
         setRecMovie(movieName)
         setIsMovie(1);
+        let x = localStorage.getItem('movie');
+        let list = JSON.parse(x) || [];
+        list.push(movieName);
+        localStorage.setItem('movie', JSON.stringify(list))
         setNames(response.data[0]);
         setPosters(response.data[1]);
     })
@@ -46,8 +44,13 @@ export default function Dashboard() {
         }
     }
 
+    function handleHistory() {
+        if (history === 1) setHistory(0);
+        else setHistory(1);
+    }
+
     return (
-        <div style={{textAlign: "center"}}>
+        <div style={{textAlign: "center", height:"100%"}}>
             {error && <div className="">{error}</div>}
             <div className="flex justify-between poppins bg-blue-500 py-3 px-3 text-white">
                 <div className="text-xl font-bold">Recommovie</div>
@@ -58,6 +61,7 @@ export default function Dashboard() {
                     </button>
                 </div>
             </div>
+            <div  style={{height: isMovie === 0? "100vh" : "100%"}}>
             <div className="p-4 flex justify-center">
                 <form className="max-w-sm" style={{width: "60%"}}>
                     <input
@@ -118,12 +122,14 @@ export default function Dashboard() {
                             <div><img src={posters[9]} alt="" /></div>
                         </div>
                     </div>
-                    <div className="flex py-2 lg:px-8 mx-4 px-4 lg:mx-8 text-xl text-gray-600 signUp-font">
-                        <span className="text-black">Youtube results for &nbsp;"</span>{recMovie}<span className="text-black">"</span>
-                    </div>
-                    <Youtube movie={movieName} />
             </div>
             }
+            </div>
+            <div className="flex justify-center pt-4 pb-2"><span className="bg-red-500 hover:bg-red-700 text-white text-sm font-bold h-12 py-2 pt-3 px-4 ml-4 rounded focus:outline-none focus:shadow-outline poppins" onClick={handleHistory}>{history === 1 ? "Show Search History" : "Hide Search History"}</span></div>
+            {history === 0 ? <div className="p-8">{list.map(l => <div className="signUp-font text-base">{l}</div>)}</div> : ""}
+            <div className="flex justify-center poppins bg-blue-500 py-4 px-3 text-white">
+                <div className="text-sm font-bold">By Prerna Choudhary</div>
+            </div>
         </div>
     );
 }
