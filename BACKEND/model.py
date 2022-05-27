@@ -1,11 +1,49 @@
+'''
+model.py : The application that is responsible for generating pickle files used in recommendation of the movies.
+
+To run the application & generate the pickle files, use the following command:
+>>> python3 model.py
+'''
+
+'''
+NumPy, which stands for Numerical Python, is a library consisting of multidimensional array objects and a collection of routines for processing those arrays. Using NumPy, mathematical and logical operations on arrays can be performed.
+'''
+
 import numpy as np
+
+'''
+Pandas is an open-source library that is made mainly for working with relational or labeled data both easily and intuitively. It provides various data structures and operations for manipulating numerical data and time series.
+'''
+
 import pandas as pd
-import ast 
+
+'''
+AST stands for Abstract Syntax Tree, which is a potent tool of the Python programming language. It allows us to interact with the Python code itself and can modify it.
+'''
+
+import ast
+
+'''
+NLTK is a toolkit build for working with NLP in Python. It provides us various text processing libraries with a lot of test datasets. A variety of tasks can be performed using NLTK such as tokenizing, parse tree visualization, etc.
+'''
+
 import nltk
-from nltk.stem.porter import PorterStemmer 
+from nltk.stem.porter import PorterStemmer
+
+'''
+Scikit-learn is a free machine learning library for Python. It features various algorithms like support vector machine, random forests, and k-neighbours, and it also supports Python numerical and scientific libraries like NumPy and SciPy.
+'''
+
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+
+'''
+Python pickle module is used for serializing and de-serializing python object structures. The process to converts any kind of python objects (list, dict, etc.) into byte streams (0s and 1s) is called pickling or serialization or flattening or marshalling. 
+'''
+
 import pickle
+
+
 movies= pd.read_csv('mdbmovies.csv')
 credits= pd.read_csv('mdbcredits.csv')
 movies = movies.merge(credits,on='title')
@@ -34,7 +72,6 @@ def convert2(obj):
 
 movies['cast'] = movies['cast'].apply(convert2)
 
-
 def fetch_director(text):
     L = []
     for i in ast.literal_eval(text):
@@ -51,7 +88,9 @@ movies['cast'] = movies['cast'].apply(lambda x:[i.replace(" ","") for i in x])
 movies['tag']=movies['overview']+movies['keywords']+movies['genres']+movies['cast']+movies['crew']
 new_df= movies[['movie_id','title','tag']]
 new_df['tag'] = new_df['tag'].apply(lambda x: " ".join(x))
+
 ps=PorterStemmer()
+
 def stem(text):
     y=[]
     for i in text.split():
@@ -64,6 +103,7 @@ vectors = cv.fit_transform(new_df['tag']).toarray()
 cv.get_feature_names()
 similarity = cosine_similarity(vectors)
 list(enumerate(similarity[0]))
+
 def recommend(movie):
     movie_index=new_df[new_df['title']==movie].index[0]
     distances = similarity[movie_index]
@@ -72,8 +112,15 @@ def recommend(movie):
     for i in movies_list:
         print(new_df.iloc[i[0]].title)
 
+'''
+Testing the file with an example movie.
+'''
+
 recommend('Batman Begins')
+
+'''
+Dumping the pickle files.
+'''
 
 pickle.dump(new_df.to_dict(),open('movies_dict.pkl','wb'))
 pickle.dump(similarity,open('similarity.pkl','wb'))
-print

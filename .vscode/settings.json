@@ -1,0 +1,16 @@
+{
+  "cSpell.words": [
+    "dropna",
+    "fastapi",
+    "iloc",
+    "IMDB",
+    "inplace",
+    "mdbcredits",
+    "mdbmovies",
+    "nltk",
+    "sklearn",
+    "toarray",
+    "uvicorn",
+    "Vectorizer"
+  ]
+}
