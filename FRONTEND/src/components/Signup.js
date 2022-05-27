@@ -31,8 +31,8 @@ export default function Signup() {
 
     return (
         <div className="">
-            <div className="flex justify-between poppins bg-blue-500 py-3 px-3 text-white">
-                <div className="text-xl font-bold">Recommovie</div>
+            <div className="flex justify-between poppins bg-yellow-400 py-3 px-3 text-white">
+                <div className="text-xl font-bold">Let's Watch</div>
             </div>
             <div
                 className="flex items-center justify-center"
@@ -94,7 +94,7 @@ export default function Signup() {
                         <div className="flex items-center justify-between">
                             <button
                                 disabled={loading}
-                                className="bg-blue-500 hover:bg-blue-700 text-white font-bold w-full h-12 py-2 px-4  rounded focus:outline-none focus:shadow-outline signUp-font"
+                                className="bg-yellow-400 hover:bg-white hover:text-yellow-400 text-white font-bold w-full h-12 py-2 px-4  rounded focus:outline-none focus:shadow-outline signUp-font"
                                 type="submit"
                             >
                                 Sign Up
@@ -102,12 +102,12 @@ export default function Signup() {
                         </div>
                     </form>
                     <div
-                        className="flex justify-center mt-4 text-gray-800 signUp-font"
+                        className="flex justify-center mt-4 text-gray-300 signUp-font"
                         style={{ fontSize: "13px" }}
                     >
                         Already have an account?{" "}
                         <Link
-                            className="font-bold text-blue-500 hover:text-blue-800"
+                            className="font-bold text-yellow-400 hover:text-yellow-500"
                             to="/login"
                         >
                             &nbsp;Log In
@@ -115,7 +115,7 @@ export default function Signup() {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center poppins bg-blue-500 py-4 px-3 text-white">
+            <div className="flex justify-center poppins bg-yellow-400 py-4 px-3 text-white">
                 <div className="text-sm font-bold">By Prerna Choudhary</div>
             </div>
         </div>

@@ -28,8 +28,8 @@ export default function Login() {
 
     return (
         <div style={{ textAlign: "center" }}>
-            <div className="flex justify-between poppins bg-blue-500 py-3 px-3 text-white">
-                <div className="text-xl font-bold">Recommovie</div>
+            <div className="flex justify-between poppins bg-yellow-400 py-3 px-3 text-white">
+                <div className="text-xl font-bold">Let's Watch</div>
             </div>
             <div
                 className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center"
@@ -58,7 +58,7 @@ export default function Login() {
                         <form className="max-w-sm" onSubmit={handleSubmit}>
                             <div className="mb-4" id="email">
                                 <label
-                                    className="block text-gray-600 text-sm font-bold mb-2 signUp-font"
+                                    className="block text-gray-300 text-sm font-bold mb-2 signUp-font"
                                     htmlFor="password"
                                 >
                                     Email
@@ -73,7 +73,7 @@ export default function Login() {
                             </div>
                             <div className="mb-4" id="password">
                                 <label
-                                    className="block text-gray-600 text-sm font-bold mb-2 signUp-font"
+                                    className="block text-gray-300 text-sm font-bold mb-2 signUp-font"
                                     htmlFor="password"
                                 >
                                     Password
@@ -89,7 +89,7 @@ export default function Login() {
                             <div className="flex items-center justify-between">
                                 <button
                                     disabled={loading}
-                                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold w-full h-12 py-2 px-4  rounded focus:outline-none focus:shadow-outline signUp-font"
+                                    className="bg-yellow-400 hover:bg-white hover:text-yellow-400 text-white font-bold w-full h-12 py-2 px-4  rounded focus:outline-none focus:shadow-outline signUp-font"
                                     type="submit"
                                 >
                                     Log In
@@ -97,32 +97,32 @@ export default function Login() {
                             </div>
                         </form>
                         <div
-                            className="flex justify-center mt-4 text-gray-800 signUp-font"
+                            className="flex justify-center mt-4 text-gray-300 signUp-font"
                             style={{ fontSize: "13px" }}
                         >
                             <Link
-                                className="font-bold text-blue-600 hover:text-blue-800"
+                                className="font-bold text-yellow-400 hover:text-yellow-500"
                                 to="/forgot-password"
                             >
                                 Forgot Password?
                             </Link>
                         </div>
                         <div
-                            className="flex justify-center mt-2 text-gray-800 signUp-font"
+                            className="flex justify-center mt-2 text-gray-300 signUp-font"
                             style={{ fontSize: "13px" }}
                         >
-                            Need an account?{" "}
+                            Need an account? {" "}
                             <Link
-                                className="font-bold text-blue-500 hover:text-blue-800"
+                                className="font-bold text-yellow-400 hover:text-yellow-500"
                                 to="/signup"
                             >
-                                &nbsp;Sign Up
+                                &nbsp; Sign Up
                             </Link>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center poppins bg-blue-500 py-4 px-3 text-white">
+            <div className="flex justify-center poppins bg-yellow-400 py-4 px-3 text-white">
                 <div className="text-sm font-bold">By Prerna Choudhary</div>
             </div>
         </div>

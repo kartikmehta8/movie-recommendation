@@ -11,10 +11,10 @@ export default function NoMovie() {
                     animationData={movie}
                 />
             </div>
-            <div className="flex justify-center poppins text-gray-700 text-lg font-bold">
+            <div className="flex justify-center poppins text-yellow-400 text-lg font-bold">
                 Movie Recommendation System
             </div>
-            <div className="flex justify-center poppins text-gray-900 text-sm mx-2">
+            <div className="flex justify-center poppins text-white text-sm mx-2">
                 a fancy way to retrieve movies based on your search preferences
             </div>
         </div>
