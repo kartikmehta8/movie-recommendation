@@ -27,7 +27,7 @@ REACT_APP_FIREBASE_API_KEY             = <Your API Key>
 REACT_APP_FIREBASE_AUTH_DOMAIN         = <Your Auth Domain>
 REACT_APP_FIREBASE_PROJECT_ID          = <Your Project ID>
 REACT_APP_FIREBASE_STORAGE_BUCKET      = <Your Bucket Storage>
-REACT_APP_FIREBASE_MESSAGING_SENDER_ID = <Your messaging Sender ID>
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID = <Your Messaging Sender ID>
 REACT_APP_FIREBASE_APP_ID              = <Your App ID>
 ```
 
