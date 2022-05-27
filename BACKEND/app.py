@@ -86,7 +86,7 @@ app.add_middleware(
 '''
 The minimal FastAPI Backend Setup with the following routes:
 1. / - Returns the status server response. If everything is OK, it returns {"server": "OK"}
-2. /movie/{movie_name} - Returns the recommended movies& the related poster as a response.
+2. /movie/{movie_name} - Returns the recommended movies & the related poster as a response.
 '''
 
 @app.get("/")
