@@ -5,7 +5,7 @@
 ## Website
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/77505989/170779500-189b1441-69d9-4cd1-a393-a0d78ebe565d.png" alt="WEBSITE" height="400px" />
+  <img src="https://user-images.githubusercontent.com/77505989/170779500-189b1441-69d9-4cd1-a393-a0d78ebe565d.png" alt="WEBSITE" />
 </p>
 
 **Let's Watch** has a React-based website designed using Tailwind CSS. It has an integration of Google Firebase for authentication. Alan AI also features its voice assistant capabilities & users can know more about the website by directly asking Alan.
