@@ -9,11 +9,14 @@ import alanBtn from "@alan-ai/alan-sdk-web";
 
 export default function App() {
     useEffect(() => {
-        alanBtn({
+        let alanBtnInstance = alanBtn({
             key: "df5e0a87ce4cf578d610608f6aad42102e956eca572e1d8b807a3e2338fdd0dc/stage",
-            onCommand: (commandData) => {
-                if (commandData.command === "go:back") {
-                    // Call the client code that will react to the received command
+            onConnectionStatus: async function (status) {
+                if (status === "authorized") {
+                    await alanBtnInstance.activate();
+                    alanBtnInstance.playText(
+                        "Welcome to Let's Watch - a Movie Recommendation Website."
+                    );
                 }
             },
         });

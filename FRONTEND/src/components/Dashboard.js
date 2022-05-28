@@ -97,85 +97,127 @@ export default function Dashboard() {
                             {recMovie}
                             <span className="text-black"></span>
                         </div>
-                        <div className="grid grid-cols-1 lg:m-8 md:m-4 md:grid-cols-3 lg:grid-cols-5 gap-4 px-2 lg:px-8">
-                            <div>
-                                <div className="poppins text-lg text-white font-bold p-1">
-                                    {names[0]}
+                        <div className="flex justify-center">
+                            <div className="grid grid-cols-1 lg:m-8 md:m-4 md:grid-cols-3 lg:grid-cols-5 gap-4 px-2 lg:px-8">
+                                <div>
+                                    <div className="poppins text-lg text-white font-bold p-1">
+                                        {names[0]}
+                                    </div>
+                                    <div>
+                                        <img
+                                            className="rounded-lg w-48 ml-7"
+                                            src={posters[0]}
+                                            alt=""
+                                        />
+                                    </div>
                                 </div>
                                 <div>
-                                    <img className="rounded-lg w-48 ml-7" src={posters[0]} alt="" />
-                                </div>
-                            </div>
-                            <div>
-                                <div className="poppins text-lg text-white font-bold p-1">
-                                    {names[1]}
-                                </div>
-                                <div>
-                                    <img className="rounded-lg w-48 ml-7" src={posters[1]} alt="" />
-                                </div>
-                            </div>
-                            <div>
-                                <div className="poppins text-lg text-white font-bold p-1">
-                                    {names[2]}
+                                    <div className="poppins text-lg text-white font-bold p-1">
+                                        {names[1]}
+                                    </div>
+                                    <div>
+                                        <img
+                                            className="rounded-lg w-48 ml-7"
+                                            src={posters[1]}
+                                            alt=""
+                                        />
+                                    </div>
                                 </div>
                                 <div>
-                                    <img className="rounded-lg w-48 ml-7" src={posters[2]} alt="" />
-                                </div>
-                            </div>
-                            <div>
-                                <div className="poppins text-lg text-white font-bold p-1">
-                                    {names[3]}
-                                </div>
-                                <div>
-                                    <img className="rounded-lg w-48 ml-7" src={posters[3]} alt="" />
-                                </div>
-                            </div>
-                            <div>
-                                <div className="poppins text-lg text-white font-bold p-1">
-                                    {names[4]}
+                                    <div className="poppins text-lg text-white font-bold p-1">
+                                        {names[2]}
+                                    </div>
+                                    <div>
+                                        <img
+                                            className="rounded-lg w-48 ml-7"
+                                            src={posters[2]}
+                                            alt=""
+                                        />
+                                    </div>
                                 </div>
                                 <div>
-                                    <img className="rounded-lg w-48 ml-7" src={posters[4]} alt="" />
-                                </div>
-                            </div>
-                            <div>
-                                <div className="poppins text-lg text-white font-bold p-1">
-                                    {names[5]}
-                                </div>
-                                <div>
-                                    <img className="rounded-lg w-48 ml-7" src={posters[5]} alt="" />
-                                </div>
-                            </div>
-                            <div>
-                                <div className="poppins text-lg text-white font-bold p-1">
-                                    {names[6]}
+                                    <div className="poppins text-lg text-white font-bold p-1">
+                                        {names[3]}
+                                    </div>
+                                    <div>
+                                        <img
+                                            className="rounded-lg w-48 ml-7"
+                                            src={posters[3]}
+                                            alt=""
+                                        />
+                                    </div>
                                 </div>
                                 <div>
-                                    <img className="rounded-lg w-48 ml-7" src={posters[6]} alt="" />
-                                </div>
-                            </div>
-                            <div>
-                                <div className="poppins text-lg text-white font-bold p-1">
-                                    {names[7]}
-                                </div>
-                                <div>
-                                    <img className="rounded-lg w-48 ml-7" src={posters[7]} alt="" />
-                                </div>
-                            </div>
-                            <div>
-                                <div className="poppins text-lg text-white font-bold p-1">
-                                    {names[8]}
+                                    <div className="poppins text-lg text-white font-bold p-1">
+                                        {names[4]}
+                                    </div>
+                                    <div>
+                                        <img
+                                            className="rounded-lg w-48 ml-7"
+                                            src={posters[4]}
+                                            alt=""
+                                        />
+                                    </div>
                                 </div>
                                 <div>
-                                    <img className="rounded-lg w-48 ml-7" src={posters[8]} alt="" />
-                                </div>
-                            </div>
-                            <div className="none">
-                                <div className="poppins text-lg text-white font-bold p-1">
-                                    {names[9]}
+                                    <div className="poppins text-lg text-white font-bold p-1">
+                                        {names[5]}
+                                    </div>
+                                    <div>
+                                        <img
+                                            className="rounded-lg w-48 ml-7"
+                                            src={posters[5]}
+                                            alt=""
+                                        />
+                                    </div>
                                 </div>
                                 <div>
-                                    <img className="rounded-lg w-48 ml-7" src={posters[9]} alt="" />
+                                    <div className="poppins text-lg text-white font-bold p-1">
+                                        {names[6]}
+                                    </div>
+                                    <div>
+                                        <img
+                                            className="rounded-lg w-48 ml-7"
+                                            src={posters[6]}
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="poppins text-lg text-white font-bold p-1">
+                                        {names[7]}
+                                    </div>
+                                    <div>
+                                        <img
+                                            className="rounded-lg w-48 ml-7"
+                                            src={posters[7]}
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="poppins text-lg text-white font-bold p-1">
+                                        {names[8]}
+                                    </div>
+                                    <div>
+                                        <img
+                                            className="rounded-lg w-48 ml-7"
+                                            src={posters[8]}
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                                <div className="none">
+                                    <div className="poppins text-lg text-white font-bold p-1">
+                                        {names[9]}
+                                    </div>
+                                    <div>
+                                        <img
+                                            className="rounded-lg w-48 ml-7"
+                                            src={posters[9]}
+                                            alt=""
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -195,7 +237,9 @@ export default function Dashboard() {
             {history === 0 ? (
                 <div className="p-8">
                     {list.map((li) => (
-                        <div className="signUp-font text-base text-white">{li}</div>
+                        <div className="signUp-font text-base text-white">
+                            {li}
+                        </div>
                     ))}
                 </div>
             ) : (
