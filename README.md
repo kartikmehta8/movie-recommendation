@@ -2,6 +2,16 @@
    <img src="https://user-images.githubusercontent.com/77505989/170781223-d059dc7b-b6c2-4893-8fac-592594cad46e.png" alt="BANNER" />
 </p>
 
+## Overview
+
+* [What is Recommendation System?](#recommendation-system)
+* [Types of Recommendation Systems](#types-of-recommendation-systems)
+   * [Collaborative Filtering](#collaborative-filtering)
+   * [Content-Based Filtering](#content-based-filtering)
+* [K-nearest neighbors (KNN) Algorithm](#k-nearest-neighbors-knn-algorithm)
+   * [Working of KNN Algorithm](#working-of-knn-algorithm)
+* [Conclusion](#conclusion)
+
 ## Recommendation System
 
 _Recommendation engines_ are a subclass of machine learning which generally deal with ranking or rating products / users. Loosely defined, a recommender system is a system which **predicts ratings a user might give to a specific item. These predictions will then be ranked and returned back to the user.** They’re used by various large name companies like Google, Instagram, Spotify, Amazon, Reddit, Netflix etc. often to increase engagement with users and the platform.
@@ -69,3 +79,7 @@ We can understand its working with the help of following steps −
 ## Conclusion
 
 After trying different algorithms to make the best out of our recommendation system, Let's Watch is packed with the `Cosine Similarity Algorithm` at the top of the `K-Nearest Neighbours (KNN) Algorithm`. The website aims to give recommendations related to users' search in the best possible way.
+
+To organize the workflow of our repository in sync with presentation, there are separate `READMEs` for backend and frontend,
+- [About Frontend](https://github.com/kartikmehta8/movie-recommendation/tree/main/FRONTEND)
+- [About Backend](https://github.com/kartikmehta8/movie-recommendation/tree/main/BACKEND)
