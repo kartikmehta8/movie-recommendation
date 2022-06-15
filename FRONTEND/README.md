@@ -44,7 +44,7 @@ You only need to install `Alan AI's SDK` and integrate **Alan Button** in your w
 ```
 useEffect(() => {
         alanBtn({
-            key: "df5e0a87ce4cf578d610608f6aad42102e956eca572e1d8b807a3e2338fdd0dc/stage",
+            key: "YOUR_ALAN_API_KEY_HERE",
             onCommand: (commandData) => {
                 if (commandData.command === "command") {
                     // Call the client code that will react to the received command
