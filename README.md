@@ -4,13 +4,15 @@
 
 ## Overview
 
-* [What is Recommendation System?](#recommendation-system)
-* [Types of Recommendation Systems](#types-of-recommendation-systems)
+* [Recommendation System](#recommendation-system)
+* [Types of Recommendation System](#types-of-recommendation-systems)
    * [Collaborative Filtering](#collaborative-filtering)
    * [Content-Based Filtering](#content-based-filtering)
 * [K-nearest neighbors (KNN) Algorithm](#k-nearest-neighbors-knn-algorithm)
    * [Working of KNN Algorithm](#working-of-knn-algorithm)
 * [Conclusion](#conclusion)
+   * [About Frontend](https://github.com/kartikmehta8/movie-recommendation/tree/main/FRONTEND)
+   * [About Backend](https://github.com/kartikmehta8/movie-recommendation/tree/main/BACKEND)
 
 ## Recommendation System
 
